@@ -8,19 +8,25 @@ body {
     max-width: 100vw;
     background-color: rgb(4, 19, 23);
     color: #fff;
+    overflow-x: hidden;
 }
-
 
 .container {
     width: 100%;
+    margin: 0 auto;
+}
+
+.hero {
+    height: 100vh;
 }
 
 
 header {
-    height: 100px;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
 
@@ -36,9 +42,9 @@ nav {
     padding: 10px;
 }
 
-
 .nav-item {
     font-family: Exo;
+    cursor: pointer;
 }
 
 .nav-list {
@@ -50,7 +56,6 @@ nav {
 
 }
 
-
 .logo-text {
     color: rgb(182,242,255);
     font-family: ordinary;
@@ -58,11 +63,10 @@ nav {
 }
 
 
-
-.persian-direction {
+.persian-direction, .hire-me {
     display: inline-block;
-    height: 90%;
-    width: 140px;
+    height: 44px;
+    width: 130px;
     background: linear-gradient(to right, rgb(8,107,123), rgb(4,72,81));
     text-align: center;
     padding-top: 10px;
@@ -71,11 +75,53 @@ nav {
     font-family: Exo;
     border: 1px solid #fff;
     border-radius: 2px;
+    cursor: pointer;
+    z-index: 999;
 }
 
 
+.lightbulb {
+    background: rgba(48, 201, 225,0.6);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(150px);
+    top: 0px;
+    z-index: -999;
+    margin-top: -80px;
+    animation: light-effect 2s infinite;
+}
 
 
+.light-left {
+    left: 0px;
+}
+
+.light-right {
+    right: 0px;
+    margin-right: -50px;
+    margin-top: -70px;
+}
+
+
+@keyframes light-effect {
+   0%{
+    width: 300px
+   }
+
+   50% {
+    width: 320px
+   }
+
+   100% {
+    width: 300px;
+}
+}
+
+.fa-globe {
+    margin-left: 10px;
+}
 
 @font-face {
     font-family: ordinary;
@@ -85,4 +131,81 @@ nav {
 @font-face {
     font-family: Exo;
     src: url(../fonts/OFT/Exo2.0-Regular.otf);
+}
+
+
+@font-face {
+    font-family: swera;
+    src: url(../fonts/swera-demo/Swera\ Bold\ Demo.otf);
+}
+
+
+.hero-content {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-title {
+    text-align: center;
+    background-image: linear-gradient(90deg,rgb(32,196,220), rgb(182,242,255),rgb(182,242,255), #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    height: 20%;
+    font-size: 80px;
+    font-family: swera;
+    padding-top: 30px;
+}
+
+
+.hero-subtitle-container {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+
+
+.hero-main-subtitle {
+    font-size: 50px;
+}
+
+
+.hero-text-subtitle, .hero-image {
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+}
+
+.hero-text-subtitle {
+    font-family: Exo;
+    padding-top: 90px;
+}
+
+
+.image {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    object-position: right;
+}
+
+
+.name {
+    font-size: 70px;
+}
+
+.family {
+    color: rgb(103,240,255)
+}
+
+
+.hero-subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.hire-me {
+    margin-top: 20px;
 }
